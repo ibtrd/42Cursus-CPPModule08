@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:42:24 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/28 02:53:59 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/28 21:14:58 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@
 # include <stdint.h>
 # include <vector>
 
-typedef	std::vector<int32_t> container_t;
-
 class Span
 {
 	private:
-		container_t	_container;
-		uint32_t	_N;
+		std::vector<int32_t>	_container;
+		uint32_t				_N;
 
 	public:
 		Span(void);
@@ -34,7 +32,7 @@ class Span
 		Span	&operator=(const Span &);
 
 		void		addNumber(uint32_t);
-		void		addNumber(container_t::iterator, container_t::iterator);
+		void		addNumber(std::vector<int32_t>::iterator, std::vector<int32_t>::iterator);
 		uint32_t	shortestSpan(void);
 		uint32_t	longestSpan(void);
 };

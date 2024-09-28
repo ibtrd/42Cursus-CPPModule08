@@ -6,19 +6,16 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 21:59:17 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/28 03:14:27 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/28 21:15:27 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Span.hpp"
-
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
+
+#include "Span.hpp"
 
 int main()
 {
-	std::srand(std::time(NULL));
 	std::cout << "Subject Tests\n";
 	{
 		Span sp = Span(5);
@@ -59,7 +56,7 @@ int main()
 	}
 	std::cout << "\nComplexity Tests\n";
 	{
-		container_t	vector;
+		std::vector<int32_t>	vector;
 
 		for (uint32_t i = 0; i < 300000; i++) {
 			vector.push_back(i * 3);
