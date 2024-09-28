@@ -6,13 +6,13 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 21:59:17 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/28 03:07:33 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/28 03:14:27 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
 #include "Span.hpp"
+
+#include <iostream>
 #include <ctime>
 #include <cstdlib>
 
@@ -59,7 +59,7 @@ int main()
 	}
 	std::cout << "\nComplexity Tests\n";
 	{
-		std::vector<int32_t>	vector;
+		container_t	vector;
 
 		for (uint32_t i = 0; i < 300000; i++) {
 			vector.push_back(i * 3);
