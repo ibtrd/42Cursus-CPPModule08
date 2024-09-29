@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:20:55 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/28 21:12:14 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/29 16:57:10 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Span::~Span(void) {}
 
 /* OPERATOR OVERLOADING ***************************************************** */
 
-Span	&Span::operator=(const Span &other) {
+Span &Span::operator=(const Span &other) {
 	if (this == &other)
 		return (*this);
 	this->_container = std::vector<int32_t>(other._container);
@@ -39,14 +39,14 @@ Span	&Span::operator=(const Span &other) {
 
 /* ************************************************************************** */
 
-void		Span::addNumber(uint32_t toAdd) {
+void Span::addNumber(uint32_t toAdd) {
 	if (this->_container.size() == this->_N) {
 		throw std::runtime_error("Span: maximum amout of element reached");
 	}
 	this->_container.push_back(toAdd);
 }
 
-void		Span::addNumber(std::vector<int32_t>::iterator first, std::vector<int32_t>::iterator last) {
+void Span::addNumber(std::vector<int32_t>::iterator first, std::vector<int32_t>::iterator last) {
 	std::vector<int32_t>::iterator	curr = first;
 	
 	while (curr != last) {
@@ -57,7 +57,7 @@ void		Span::addNumber(std::vector<int32_t>::iterator first, std::vector<int32_t>
 	}
 }
 
-uint32_t	Span::shortestSpan(void) {
+uint32_t Span::shortestSpan(void) {
 	if (this->_container.size() < 2) {
 		throw std::runtime_error("Span: invalid amount of elements");
 	}
@@ -76,7 +76,7 @@ uint32_t	Span::shortestSpan(void) {
 	return (shortest);
 }
 
-uint32_t	Span::longestSpan(void) {
+uint32_t Span::longestSpan(void) {
 	if (this->_container.size() < 2) {
 		throw std::runtime_error("Span: invalid amount of elements");
 	}

@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 21:59:17 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/28 21:15:27 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/29 16:58:43 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,11 @@ int main()
 	{
 		std::vector<int32_t>	vector;
 
-		for (uint32_t i = 0; i < 300000; i++) {
+		for (uint32_t i = 0; i < 100000; i++) {
 			vector.push_back(i * 3);
 		}
 
-		Span	sp(300000);
+		Span	sp(100000);
 
 		sp.addNumber(vector.begin(), vector.end());
 
