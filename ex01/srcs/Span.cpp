@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 22:20:55 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/29 16:57:10 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/30 20:28:08 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Span &Span::operator=(const Span &other) {
 
 /* ************************************************************************** */
 
-void Span::addNumber(uint32_t toAdd) {
+void Span::addNumber(int32_t toAdd) {
 	if (this->_container.size() == this->_N) {
 		throw std::runtime_error("Span: maximum amout of element reached");
 	}
