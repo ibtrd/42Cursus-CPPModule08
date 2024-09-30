@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 21:59:17 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/21 23:23:55 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/30 20:24:30 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include <vector>
 #include <list>
 #include <iostream>
-#include <easyfind.hpp>
+
+#include "easyfind.hpp"
 
 template <typename T>
 void	test(T &container, int32_t target) {
@@ -24,15 +25,13 @@ void	test(T &container, int32_t target) {
 		std::cout << *container.rbegin() << (i < 10 - 1 ? " " : "\n");
 	}
 
-	
-	typename T::iterator	search = easyfind(container, target);
-	
+	typename T::iterator	search = easyfind(container, target);	
 
 	std::cout << "searching : " << target << "\n";
 	if (search != container.end()) {
-		std::cout << "found : " << *search << std::endl;
+		std::cout << "found : " << *search << "\n" << std::endl;
 	} else {
-		std::cout << "not found..." << std::endl;
+		std::cout << "not found..." << "\n" <<  std::endl;
 	}
 }
 
