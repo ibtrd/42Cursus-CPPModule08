@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 21:59:17 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/30 00:00:00 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/30 20:35:18 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,12 @@ int main()
 		}
 		std::stack<int> s(mstack);
 
-		std::cout << "Bonus tests\n";
-		// MutantStack<int>::iterator itbb = mstack.rbegin();
-		// ite = mstack.rend();
-		while (it != ite)
+		std::cout << "\nReverse tests\n";
+		MutantStack<int>::reverse_iterator rit = mstack.rbegin();
+		while (rit != mstack.rend())
 		{
-			std::cout << *it << std::endl;
-			++it;
+			std::cout << *rit << std::endl;
+			++rit;
 		}
 	}
 	std::cout << "\nTest as std::list<int>\n";
@@ -74,6 +73,18 @@ int main()
 		{
 			std::cout << *it << std::endl;
 			++it;
+		}
+
+		std::cout << "\nReverse tests\n";
+		std::list<int>::reverse_iterator rit = mstack.rbegin();
+		while (rit != mstack.rend())
+		{
+			std::cout << *rit << std::endl;
+			++rit;
+		}
+		{
+			MutantStack<int>	mstack;
+			
 		}
 	}
 	return 0;

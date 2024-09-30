@@ -6,7 +6,7 @@
 /*   By: ibertran <ibertran@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 21:30:52 by ibertran          #+#    #+#             */
-/*   Updated: 2024/09/29 23:59:43 by ibertran         ###   ########lyon.fr   */
+/*   Updated: 2024/09/30 16:09:58 by ibertran         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ typename MutantStack<T>::iterator	MutantStack<T>::end(void) {
 }
 
 template <typename T>
-typename MutantStack<T>::iterator	MutantStack<T>::rbegin(void) {
+typename MutantStack<T>::reverse_iterator	MutantStack<T>::rbegin(void) {
 	return this->c.rbegin();
 }
 
 template <typename T>
-typename MutantStack<T>::iterator	MutantStack<T>::rend(void) {
+typename MutantStack<T>::reverse_iterator	MutantStack<T>::rend(void) {
 	return this->c.rend();
 }
 
